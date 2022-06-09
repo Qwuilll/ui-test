@@ -40,7 +40,6 @@ ab.TextColor3=Color3.new(1,1,1)
 ab.TextSize=20
 local bb=game:service'VirtualUser'
 
-function time() 
   while wait(1) do
    z += 1
     if z == 60 then  
@@ -49,10 +48,8 @@ function time()
     if z == 59 and y == 60 then 
       x += 1 and z == 0 and y == 0
     end
-  end
+  local hour = tostring(x)
+  local min = tostring(y)
+  local sec = tostring(z)
+  ab.Text = (hour..":"..min..":"..sec")
 end
-local hour = tostring(x)
-local min = tostring(y)
-local sec = tostring(z)
-ab.Text = (hour..":"..min..":"..sec")
-
