@@ -42,12 +42,21 @@ ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)
 ab.Position=UDim2.new(0,0,0.158377379,0)
 ab.Size=UDim2.new(0,304,0,44)
 ab.Font=Enum.Font.ArialBold
-ab.Text = "test"
 ab.TextColor3=Color3.new(1,1,1)
 ab.TextSize=20
 
 local bb=game:service'VirtualUser'
 
+while wait(1) do
+  z += 1
+  if z == 60 then  
+    z == 0 and y += 1
+  end
+  if z == 59 and y == 60 then 
+    x += 1 and z == 0 and y == 0
+  end
+  ab.Text = ("hi")
+end
   
   
   
