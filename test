@@ -4,6 +4,7 @@ local da=Instance.new("Frame")
 local _b=Instance.new("TextLabel")
 local ab=Instance.new("TextLabel")
 
+while wait(1) do
 ba.Parent=game.CoreGui
 ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling
 
@@ -44,12 +45,17 @@ ab.Size=UDim2.new(0,304,0,44)
 ab.Font=Enum.Font.ArialBold
 ab.TextColor3=Color3.new(1,1,1)
 ab.TextSize=20
-ab.Text = "hi"
 
 local bb=game:service'VirtualUser'
 
-while wait(1) do
   z += 1
+  if z == 60 then  
+    z == 0 and y += 1
+  end
+  if z == 59 and y == 60 then 
+    x += 1 and z == 0 and y == 0
+  end
+  ab.Text = (x..":"..y..":"..z)
 end
   
   
