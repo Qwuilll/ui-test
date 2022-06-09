@@ -13,4 +13,4 @@ while wait(1) do
   local min = tostring(y)
   local sec = tostring(z)
 end
-print(x..":"..y..":"..z)
+print(hour..":"..min..":"..sec)
